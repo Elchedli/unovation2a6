@@ -1,0 +1,83 @@
+.allall{
+    
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.all{
+    width: 40%;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+.buttenv{
+    width: 50%;
+}
+.choisir{
+    margin-top: 30px;
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+}
+.btn-danger{
+    margin-left: 10px;
+    width: 30%;
+}
+.inputbox{
+    width: 100%;
+    position: relative;
+    height: 60px;
+    margin-top: 15px;
+    background-color: none;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    color: gray;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.inputbox label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black; 
+    overflow: hidden;
+}
+
+.inputbox label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.inputbox input:focus + .label-name .content-name,
+.inputbox input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #5fa8d3;
+} 
+
+.inputbox input:focus + .label-name::after,
+.inputbox input:valid + .label-name::after{
+    transform: translateX(0%);
+}
