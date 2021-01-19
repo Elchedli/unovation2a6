@@ -1,0 +1,14 @@
+Example1:
+ 3-que le code ne s'execute pas mais il s'affiche.
+Exemple2:
+  D'afficher 1 jusqu'a 15000 et a chaque fois sa saute de 2.
+Example3:
+    <?php
+        $age=22;
+        $sexe="f";
+        if($age > 20 && $age < 41 && $sexe === "f") echo "bienvenue approprié";
+    ?>
+Application:
+2-d: changement de l'url avec ? et les variables
+3-Rien ne s'affiche dans les variables envoyer.
+5-la méthode GET elle est faite par défaut.

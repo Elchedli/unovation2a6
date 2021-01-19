@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <style>
+        .formulaire{
+            text-align: center;
+            display: table;
+            margin: auto;
+        }
+        .formulaire form{
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="formulaire">
+      <h3>Ajouter un Club</h3>
+      <h1>Formulaire</h1>
+      <form action="ajoutClub.php" method="POST" name="f" onsubmit="return verif()">
+        <table>
+            <tr>
+            <td>Id * :</td>
+            <td><Input name="id"></Input></td>
+            </tr>
+            <tr>
+                <td>Nom*:</td>
+                <td><Input name="nom"></Input></td>
+            </tr>
+            <tr>
+                <td>Description*:</td>
+                <td><Input name="desc"></Input></td>
+            </tr>
+
+            <tr>
+                <td>Adresse*:</td>
+                <td><Input name="adr"></Input></td>
+            </tr>
+
+            <tr>
+                <td>Domaine*:</td>
+                <td><Input name="domaine"></Input></td>
+            </tr>      
+        </table>
+        <button>Envoyer</button>
+    </form>
+    </div>
+    <script>
+        function verif(){
+            if(!f.id.value){
+                alert("champ id est manquant");
+                return false;
+            }
+            if(!f.nom.value){
+                alert("champ nom est manquant");
+                return false;
+            }
+            if(!f.desc.value){
+                alert("champ description est manquant");
+                return false;
+            }
+            if(!f.adr.value){
+                alert("champ adresse est manquant");
+                return false;
+            }
+            if(!f.domaine.value){
+                alert("champ domaine est manquant");
+                return false;
+            }
+            
+        }
+    </script>
+  </body>
+</html>
